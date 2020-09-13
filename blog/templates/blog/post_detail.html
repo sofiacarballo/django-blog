@@ -13,6 +13,8 @@
   <div class="date">
     <h3>Published:</h3> {{ post.published_date }}
   </div>
+  {% else %}
+    <a class="btn btn-success" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
   {% endif %}
 </div>
 {% endblock %}
